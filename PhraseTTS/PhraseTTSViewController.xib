@@ -53,13 +53,13 @@
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIBarButtonItem" id="657875354">
-								<string key="IBUITitle">Clear</string>
+								<string key="IBUITitle">Clear Search Box</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">2</int>
 								<reference key="IBUIToolbar" ref="851106766"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="548234047">
-								<string key="IBUITitle">Speak Previous</string>
+								<string key="IBUITitle">Repeat Last Phrase</string>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="851106766"/>

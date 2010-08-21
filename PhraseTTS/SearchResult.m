@@ -225,7 +225,7 @@
 	// add * to specify partial matches on words...b
 	if ( [noPunc characterAtIndex:([noPunc length]-1)] != ' ' ) {
 		NSLog(@"no space");
-		noPunc = [noPunc stringByAppendingString:@"*"];
+		noPunc = [noPunc stringByAppendingString:@"%"];
 	}
 	
 	// SELECT * FROM phrases LEFT OUTER JOIN used_phrases ON phrases.rowid = used_phrases.rowid;
@@ -233,7 +233,7 @@
 	// SELECT phrases.body,used_phrases.uses FROM phrases LEFT OUTER JOIN used_phrases ON phrases.rowid = used_phrases.rowid WHERE phrases.no_punc_body MATCH 'hav*' ORDER BY used_phrases.uses DESC;
 	
 	//FMResultSet *rs = [db executeQuery:@"SELECT rowid, body, uses FROM phrases WHERE no_punc_body MATCH ?;" , noPunc ];
-	FMResultSet *rs = [db executeQuery:@"SELECT phrases.rowid, phrases.body, used_phrases.uses FROM phrases LEFT OUTER JOIN used_phrases ON phrases.rowid = used_phrases.rowid WHERE phrases.no_punc_body MATCH ? ORDER BY used_phrases.uses DESC;" , noPunc ];
+	FMResultSet *rs = [db executeQuery:@"SELECT phrases.rowid, phrases.body, used_phrases.uses FROM phrases LEFT OUTER JOIN used_phrases ON phrases.rowid = used_phrases.rowid WHERE phrases.no_punc_body LIKE ? ORDER BY used_phrases.uses DESC;" , noPunc ];
 	
 	NSMutableArray * arr = [[[NSMutableArray alloc] init] autorelease];
 	
