@@ -22,7 +22,7 @@
 
 @implementation PhraseTTSViewController
 
-@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar;
+@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar, previous;
 
 
 /*
@@ -304,6 +304,13 @@
 - (IBAction)didTouchClearButton {
 	[searchTextField setText:@""];
 }
+
+- (IBAction)speakPrevious{
+	if (self.previous) {
+		[self resultClicked:self.previous];
+	}
+		
+}
 	
 
 
@@ -443,10 +450,11 @@
 
 -(void) resultClicked:(SearchResult*) result {
 	
+	
 	[[Model instance] speakText: result.body ];
 	
 	[result incrementUsesAndSave];
-	
+	previous = result;
 	
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "WordSuggestionsView.h"
 #import <CoreText/CoreText.h>
+#import "SearchResult.h"
 
 
 
@@ -17,6 +18,7 @@
 	IBOutlet UISearchBar * searchBar;
 	IBOutlet UITextField * searchTextField;
 	IBOutlet UITableView * tableView;
+	SearchResult *previous;
 	
 	NSMutableArray * currentSearchResults;
 	
@@ -31,8 +33,10 @@
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) NSMutableArray * currentSearchResults;
+@property (nonatomic, retain) SearchResult *previous;
 
 - (IBAction)didTouchClearButton;
+- (IBAction)speakPrevious;
 
 @end
 
