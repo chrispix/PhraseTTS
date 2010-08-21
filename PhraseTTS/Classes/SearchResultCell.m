@@ -25,14 +25,15 @@
 		resultButtonOne.titleLabel.adjustsFontSizeToFitWidth = YES;
 		resultButtonOne.titleLabel.minimumFontSize = 14;
 		resultButtonOne.titleLabel.textColor = [UIColor blackColor];
+		resultButtonOne.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 		[resultButtonOne setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 		
-		[resultButtonOne addTarget:self action:@selector(resultOneClicked) forControlEvents:UIControlEventTouchUpInside];
+		/*[resultButtonOne addTarget:self action:@selector(resultOneClicked) forControlEvents:UIControlEventTouchUpInside];
 		[resultButtonOne addTarget:self action:@selector(buttonDown:) forControlEvents:UIControlEventTouchDown];
 		[resultButtonOne addTarget:self action:@selector(buttonUp:) forControlEvents:UIControlEventTouchUpInside];
 		[resultButtonOne addTarget:self action:@selector(buttonUp:) forControlEvents:UIControlEventTouchUpOutside];
 		[resultButtonOne addTarget:self action:@selector(buttonUp:) forControlEvents:UIControlEventTouchCancel];
-		
+		*/
 		//resultButtonTwo = [[UIButton alloc] initWithFrame:CGRectMake(404, 0, 400, CELL_HEIGHT)];
 		resultButtonTwo = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
 		resultButtonTwo.frame = CGRectMake(404, 0, 400, CELL_HEIGHT);
@@ -41,6 +42,7 @@
 		resultButtonTwo.titleLabel.adjustsFontSizeToFitWidth = YES;
 		resultButtonTwo.titleLabel.minimumFontSize = 14;
 		resultButtonTwo.titleLabel.textColor = [UIColor blackColor];
+		resultButtonTwo.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
 		[resultButtonTwo setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 		
 		[resultButtonTwo addTarget:self action:@selector(resultTwoClicked) forControlEvents:UIControlEventTouchUpInside];

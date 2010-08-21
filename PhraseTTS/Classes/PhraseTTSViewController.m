@@ -22,7 +22,7 @@
 
 @implementation PhraseTTSViewController
 
-@synthesize searchBar , tableView, currentSearchResults , searchTextField;
+@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar;
 
 
 /*
@@ -85,6 +85,7 @@
 	
 }
 
+
 -(void) searchTable {
 	
 	if ( [Model instance].updatingIndex ) {
@@ -126,15 +127,26 @@
      */
 	
     NSDictionary *userInfo = [notification userInfo];
+
     
     // Get the origin of the keyboard when it's displayed.
     NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
 	
+
     // Get the top of the keyboard as the y coordinate of its origin in self's view's coordinate system. The bottom of the text view's frame should align with the top of the keyboard's final position.
     CGRect keyboardRect = [aValue CGRectValue];
     keyboardRect = [self.view convertRect:keyboardRect fromView:nil];
-    
+	
+	
+	
     CGFloat keyboardTop = keyboardRect.origin.y;
+	
+	if (!self.toolbar) {
+		self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 768, 40)];
+	}
+	[[self toolbar] setHidden:NO];
+	
+	[self.view addSubview:toolbar];
     CGRect newTextViewFrame = tableView.frame;
     newTextViewFrame.size.height = keyboardTop - tableView.frame.origin.y;
     
@@ -169,7 +181,7 @@
     [UIView setAnimationDuration:animationDuration];
     
     tableView.frame = CGRectMake(0, 44, self.view.bounds.size.width, self.view.bounds.size.height - 44);
-    
+    toolbar.hidden = YES;
     [UIView commitAnimations];
 }
 
@@ -289,6 +301,10 @@
 	
 }
 
+- (IBAction)didTouchClearButton {
+	[searchTextField setText:@""];
+}
+	
 
 
 #pragma mark -

@@ -21,6 +21,7 @@
 	NSMutableArray * currentSearchResults;
 	
 	WordSuggestionsView * wordSuggestionsView;
+	IBOutlet UIToolbar *toolbar;
 	
 	
 }
@@ -28,9 +29,10 @@
 @property (nonatomic, retain) UITextField * searchTextField;
 @property (nonatomic, retain) IBOutlet UISearchBar * searchBar;
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
+@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) NSMutableArray * currentSearchResults;
 
-
+- (IBAction)didTouchClearButton;
 
 @end
 
