@@ -284,14 +284,11 @@
 		
 		
 		if ( [sr checkIfExistsAndPopulateIfSo] ) {
-			
 			[sr incrementUsesAndSave];
 			
 		} else {
-			
 			sr.uses = 1;
 			[sr insertIntoDb];
-			
 		}
 		
 		if (!previous) {
