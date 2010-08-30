@@ -30,6 +30,7 @@
 -(BOOL) checkIfExistsAndPopulateIfSo;
 -(BOOL) removeFromDb;
 
+
 +(SearchResult*) searchResultFromResultSet:(FMResultSet*) rs;
 
 +(NSArray*) sortedSearchForQuery:(NSString*)query;
@@ -37,6 +38,8 @@
 +(NSArray*) getWordCompletions:(NSString*)word;
 
 +(void) clearSearchHistory;
+
+-(void) copy:(SearchResult *)sr;
 
 @end
 

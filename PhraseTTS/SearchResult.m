@@ -442,5 +442,10 @@
 	
 }
 
+-(void) copy:(SearchResult *)sr {
+	body = [sr body];
+	uses = [sr uses];
+}
+
 
 @end

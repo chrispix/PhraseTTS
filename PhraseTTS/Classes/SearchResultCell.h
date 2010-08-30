@@ -34,5 +34,4 @@
 -(void) setLeftSearchResult:(SearchResult*) result;
 -(void) setRightSearchResult:(SearchResult*) result;
 
-
 @end

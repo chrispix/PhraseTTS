@@ -57,7 +57,7 @@ cst_voice *voice;
 {
 	NSMutableString *cleanString;
 	cleanString = [NSMutableString stringWithString:@""];
-	if([text length] > 1)
+	if([text length] >= 1)
 	{
 		int x = 0;
 		while (x < [text length])

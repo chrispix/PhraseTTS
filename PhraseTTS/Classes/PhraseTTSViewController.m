@@ -294,7 +294,11 @@
 			
 		}
 		
-		
+		if (!previous) {
+			previous = [[SearchResult alloc] init];
+		}
+		[previous copy:sr];
+
 		[sr release];
 		
 		[[Model instance] speakText:searchTextField.text];
@@ -319,7 +323,7 @@
 
 - (IBAction)speakPrevious{
 	if (self.previous) {
-		[self resultClicked:self.previous];
+		[self resultClicked:previous];
 	}
 		
 }
