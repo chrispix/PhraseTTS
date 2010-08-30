@@ -101,14 +101,15 @@
 	
 	 
 	if ( [msc.key isEqualToString:kKeyboardTypeKey] ) {
-		
-		
+		NSLog(@"KEY: %@" , key);
+		//[defs setObject:key forKey:kKeyboardTypeKey];
 		
 	} else if ( [msc.key isEqualToString:kVoiceKey] ) {
 		
 		[[Model instance] setVoiceFromKey:key];
 		
 	}
+	
 }
 
 -(void) clearSearchHistory {

@@ -22,7 +22,7 @@
 
 @implementation PhraseTTSViewController
 
-@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar, previous;
+@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar, previous, sequentialKeyboardView;
 
 
 /*
@@ -56,7 +56,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 	
-	
+	/*[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
+								  owner:self options:nil];
+	self.searchTextField.inputView = self.sequentialKeyboardView;*/
 	
 }
 
@@ -142,6 +144,7 @@
     CGFloat keyboardTop = keyboardRect.origin.y;
 	
 	if (!self.toolbar) {
+		//if landscape
 		self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 768, 40)];
 	}
 	[[self toolbar] setHidden:NO];
@@ -160,6 +163,7 @@
     [UIView setAnimationDuration:animationDuration];
     
     tableView.frame = newTextViewFrame;
+	
 	
     [UIView commitAnimations];
 }
@@ -216,20 +220,27 @@
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-	//[searchTextField becomeFirstResponder];
 	
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
 	
+	NSString *key = [defs objectForKey:kKeyboardTypeKey];
+	
+	if ([key isEqualToString:@"ABCD"]) {
+		if (searchTextField.inputView == nil) {
+			[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
+										  owner:self options:nil];
+			searchTextField.inputView = self.sequentialKeyboardView;
+		}
+	}
+	else {
+		searchTextField.inputView = nil;
+	}
 	
 	if ( USE_WORD_LIST ) {
-		
-		
-		 
 		if (searchTextField.inputAccessoryView == nil) {
-			
 			wordSuggestionsView = [[WordSuggestionsView alloc] init];
-			
 			searchTextField.inputAccessoryView = wordSuggestionsView;    
-			
 			
 		}
 	
@@ -287,6 +298,7 @@
 		[sr release];
 		
 		[[Model instance] speakText:searchTextField.text];
+		self.searchTextField.text=@"";
 		
 	}
 	
@@ -503,6 +515,91 @@
 	[currentSearchResults release];
 	currentSearchResults = nil;
 	
+}
+#pragma mark sequentialKeyboardStrokes
+-(IBAction) didTapAKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"a"];
+}
+-(IBAction) didTapBKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"b"];
+}
+-(IBAction) didTapCKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"c"];
+}
+-(IBAction) didTapDKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"d"];
+}
+-(IBAction) didTapEKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"e"];
+}
+-(IBAction) didTapFKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"f"];
+}
+-(IBAction) didTapGKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"g"];
+}
+-(IBAction) didTapHKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"h"];
+}
+-(IBAction) didTapIKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"i"];
+}
+-(IBAction) didTapJKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"j"];
+}
+-(IBAction) didTapKKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"k"];
+}
+-(IBAction) didTapLKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"l"];
+}
+-(IBAction) didTapMKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"m"];
+}
+-(IBAction) didTapNKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"n"];
+}
+-(IBAction) didTapOKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"o"];
+}
+-(IBAction) didTapPKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"p"];
+}
+-(IBAction) didTapQKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"q"];
+}
+-(IBAction) didTapRKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"r"];
+}
+-(IBAction) didTapSKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"s"];
+}
+-(IBAction) didTapTKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"t"];
+}
+-(IBAction) didTapUKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"u"];
+}
+-(IBAction) didTapVKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"v"];
+}
+-(IBAction) didTapWKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"w"];
+}
+-(IBAction) didTapXKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"x"];
+}
+-(IBAction) didTapYKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"y"];
+}
+-(IBAction) didTapZKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"z"];
+}
+-(IBAction) didTapReturnKey {
+	//self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"a"];
+//	same as other return key;
+	[self textFieldShouldReturn:searchTextField];
+	[searchTextField resignFirstResponder];
 }
 
 @end

@@ -18,6 +18,7 @@
 	IBOutlet UISearchBar * searchBar;
 	IBOutlet UITextField * searchTextField;
 	IBOutlet UITableView * tableView;
+	UIView *sequentialKeyboardVIew;
 	SearchResult *previous;
 	
 	NSMutableArray * currentSearchResults;
@@ -32,11 +33,40 @@
 @property (nonatomic, retain) IBOutlet UISearchBar * searchBar;
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, retain) IBOutlet UIView *sequentialKeyboardView;
 @property (nonatomic, retain) NSMutableArray * currentSearchResults;
 @property (nonatomic, retain) SearchResult *previous;
 
 - (IBAction)didTouchClearButton;
 - (IBAction)speakPrevious;
+
+-(IBAction) didTapAKey;
+-(IBAction) didTapBKey;
+-(IBAction) didTapCKey;
+-(IBAction) didTapDKey;
+-(IBAction) didTapEKey;
+-(IBAction) didTapFKey;
+-(IBAction) didTapGKey;
+-(IBAction) didTapHKey;
+-(IBAction) didTapIKey;
+-(IBAction) didTapJKey;
+-(IBAction) didTapKKey;
+-(IBAction) didTapLKey;
+-(IBAction) didTapMKey;
+-(IBAction) didTapNKey;
+-(IBAction) didTapOKey;
+-(IBAction) didTapPKey;
+-(IBAction) didTapQKey;
+-(IBAction) didTapRKey;
+-(IBAction) didTapSKey;
+-(IBAction) didTapTKey;
+-(IBAction) didTapUKey;
+-(IBAction) didTapVKey;
+-(IBAction) didTapWKey;
+-(IBAction) didTapXKey;
+-(IBAction) didTapYKey;
+-(IBAction) didTapZKey;
+-(IBAction) didTapReturnKey;
 
 @end
 
