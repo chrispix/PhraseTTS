@@ -26,6 +26,9 @@
 	WordSuggestionsView * wordSuggestionsView;
 	IBOutlet UIToolbar *toolbar;
 	
+	IBOutlet UIBarButtonItem *clearButton;
+	IBOutlet UIBarButtonItem *repeatButton;
+	
 	
 }
 
@@ -36,6 +39,9 @@
 @property (nonatomic, retain) IBOutlet UIView *sequentialKeyboardView;
 @property (nonatomic, retain) NSMutableArray * currentSearchResults;
 @property (nonatomic, retain) SearchResult *previous;
+
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *clearButton;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *repeatButton;
 
 - (IBAction)didTouchClearButton;
 - (IBAction)speakPrevious;
@@ -67,6 +73,8 @@
 -(IBAction) didTapYKey;
 -(IBAction) didTapZKey;
 -(IBAction) didTapReturnKey;
+-(IBAction) didTapSpaceKey;
+-(IBAction) didTapDropKey;
 
 @end
 

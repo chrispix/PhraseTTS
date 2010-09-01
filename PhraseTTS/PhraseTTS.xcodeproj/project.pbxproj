@@ -165,6 +165,11 @@
 		C35B3DD7122B627400E3D50C /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B3DBB122B627400E3D50C /* X.png */; };
 		C35B3DD8122B627400E3D50C /* Y.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B3DBC122B627400E3D50C /* Y.png */; };
 		C35B3DD9122B627400E3D50C /* Z.png in Resources */ = {isa = PBXBuildFile; fileRef = C35B3DBD122B627400E3D50C /* Z.png */; };
+		C37D61BD122DFCF8003D54EB /* _keyboard_drop.png in Resources */ = {isa = PBXBuildFile; fileRef = C37D61B9122DFCF8003D54EB /* _keyboard_drop.png */; };
+		C37D61BE122DFCF8003D54EB /* _period-questionmark-123_LEFT.png in Resources */ = {isa = PBXBuildFile; fileRef = C37D61BA122DFCF8003D54EB /* _period-questionmark-123_LEFT.png */; };
+		C37D61BF122DFCF8003D54EB /* _period-questionmark-123_RIGHT.png in Resources */ = {isa = PBXBuildFile; fileRef = C37D61BB122DFCF8003D54EB /* _period-questionmark-123_RIGHT.png */; };
+		C37D61C0122DFCF8003D54EB /* _spacebar.png in Resources */ = {isa = PBXBuildFile; fileRef = C37D61BC122DFCF8003D54EB /* _spacebar.png */; };
+		C37D6285122E182B003D54EB /* LandscapeSequentialKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C37D6284122E182B003D54EB /* LandscapeSequentialKeyboard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -413,6 +418,11 @@
 		C35B3DBC122B627400E3D50C /* Y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Y.png; sourceTree = "<group>"; };
 		C35B3DBD122B627400E3D50C /* Z.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Z.png; sourceTree = "<group>"; };
 		C36F45CE122B7AAA001B34CB /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
+		C37D61B9122DFCF8003D54EB /* _keyboard_drop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _keyboard_drop.png; sourceTree = "<group>"; };
+		C37D61BA122DFCF8003D54EB /* _period-questionmark-123_LEFT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_period-questionmark-123_LEFT.png"; sourceTree = "<group>"; };
+		C37D61BB122DFCF8003D54EB /* _period-questionmark-123_RIGHT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_period-questionmark-123_RIGHT.png"; sourceTree = "<group>"; };
+		C37D61BC122DFCF8003D54EB /* _spacebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _spacebar.png; sourceTree = "<group>"; };
+		C37D6284122E182B003D54EB /* LandscapeSequentialKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandscapeSequentialKeyboard.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -507,6 +517,7 @@
 				8D1107310486CEB800E47090 /* PhraseTTS-Info.plist */,
 				74A1CFA51209C695000A6138 /* TODO */,
 				C34EE83512276651003BAE96 /* SequentialKeyboardView.xib */,
+				C37D6284122E182B003D54EB /* LandscapeSequentialKeyboard.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -827,6 +838,10 @@
 		C35B3DA1122B627400E3D50C /* big */ = {
 			isa = PBXGroup;
 			children = (
+				C37D61B9122DFCF8003D54EB /* _keyboard_drop.png */,
+				C37D61BA122DFCF8003D54EB /* _period-questionmark-123_LEFT.png */,
+				C37D61BB122DFCF8003D54EB /* _period-questionmark-123_RIGHT.png */,
+				C37D61BC122DFCF8003D54EB /* _spacebar.png */,
 				C35B3DA2122B627400E3D50C /* _backspace.png */,
 				C35B3DA3122B627400E3D50C /* _return.png */,
 				C35B3DA4122B627400E3D50C /* A.png */,
@@ -944,6 +959,11 @@
 				C35B3DD7122B627400E3D50C /* X.png in Resources */,
 				C35B3DD8122B627400E3D50C /* Y.png in Resources */,
 				C35B3DD9122B627400E3D50C /* Z.png in Resources */,
+				C37D61BD122DFCF8003D54EB /* _keyboard_drop.png in Resources */,
+				C37D61BE122DFCF8003D54EB /* _period-questionmark-123_LEFT.png in Resources */,
+				C37D61BF122DFCF8003D54EB /* _period-questionmark-123_RIGHT.png in Resources */,
+				C37D61C0122DFCF8003D54EB /* _spacebar.png in Resources */,
+				C37D6285122E182B003D54EB /* LandscapeSequentialKeyboard.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

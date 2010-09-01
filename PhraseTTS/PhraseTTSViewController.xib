@@ -45,16 +45,16 @@
 					<object class="IBUIToolbar" id="851106766">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">-2147483382</int>
-						<string key="NSFrame">{{0, 746}, {768, 44}}</string>
+						<string key="NSFrame">{{0, 490}, {1024, 44}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIBarButtonItem" id="75977897">
+							<object class="IBUIBarButtonItem" id="101702603">
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<float key="IBUIWidth">151</float>
+								<float key="IBUIWidth">124</float>
 								<reference key="IBUIToolbar" ref="851106766"/>
 								<int key="IBUISystemItemIdentifier">6</int>
 							</object>
@@ -77,7 +77,7 @@
 					<object class="IBUINavigationBar" id="499943805">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">294</int>
-						<string key="NSFrameSize">{768, 44}</string>
+						<string key="NSFrameSize">{1024, 44}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<object class="NSArray" key="IBUIItems">
@@ -91,7 +91,7 @@
 					<object class="IBUITableView" id="495298520">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{0, 46}, {768, 960}}</string>
+						<string key="NSFrame">{{0, 45}, {1024, 704}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<object class="NSColor" key="IBUIBackgroundColor" id="394428620">
 							<int key="NSColorSpace">3</int>
@@ -115,7 +115,7 @@
 					<object class="IBUITextField" id="783501135">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">291</int>
-						<string key="NSFrame">{{217, 6}, {541, 31}}</string>
+						<string key="NSFrame">{{290, 6}, {723, 31}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -172,11 +172,14 @@
 						<int key="IBUITextAlignment">1</int>
 					</object>
 				</object>
-				<string key="NSFrameSize">{768, 1004}</string>
+				<string key="NSFrameSize">{1024, 748}</string>
 				<reference key="NSSuperview"/>
 				<reference key="IBUIBackgroundColor" ref="394428620"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics">
 					<int key="IBUIStatusBarStyle">2</int>
+				</object>
+				<object class="IBUISimulatedOrientationMetrics" key="IBUISimulatedOrientationMetrics">
+					<int key="interfaceOrientation">3</int>
 				</object>
 				<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 			</object>
@@ -256,6 +259,22 @@
 					</object>
 					<int key="connectionID">28</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">clearButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="657875354"/>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">repeatButton</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="548234047"/>
+					</object>
+					<int key="connectionID">32</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -305,11 +324,6 @@
 						<reference key="parent" ref="499943805"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">10</int>
-						<reference key="object" ref="495298520"/>
-						<reference key="parent" ref="766721923"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
 						<reference key="object" ref="783501135"/>
 						<reference key="parent" ref="766721923"/>
@@ -326,7 +340,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="657875354"/>
 							<reference ref="548234047"/>
-							<reference ref="75977897"/>
+							<reference ref="101702603"/>
 						</object>
 						<reference key="parent" ref="766721923"/>
 					</object>
@@ -342,8 +356,13 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">30</int>
-						<reference key="object" ref="75977897"/>
+						<reference key="object" ref="101702603"/>
 						<reference key="parent" ref="851106766"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">10</int>
+						<reference key="object" ref="495298520"/>
+						<reference key="parent" ref="766721923"/>
 					</object>
 				</object>
 			</object>
@@ -371,7 +390,7 @@
 					<string>UIResponder</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{177, -3}, {783, 756}}</string>
+					<string>{{177, 0}, {1039, 756}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -398,7 +417,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -414,6 +433,7 @@
 							<string>didTapBKey</string>
 							<string>didTapCKey</string>
 							<string>didTapDKey</string>
+							<string>didTapDropKey</string>
 							<string>didTapEKey</string>
 							<string>didTapFKey</string>
 							<string>didTapGKey</string>
@@ -430,6 +450,7 @@
 							<string>didTapRKey</string>
 							<string>didTapReturnKey</string>
 							<string>didTapSKey</string>
+							<string>didTapSpaceKey</string>
 							<string>didTapTKey</string>
 							<string>didTapUKey</string>
 							<string>didTapVKey</string>
@@ -442,6 +463,8 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -481,6 +504,7 @@
 							<string>didTapBKey</string>
 							<string>didTapCKey</string>
 							<string>didTapDKey</string>
+							<string>didTapDropKey</string>
 							<string>didTapEKey</string>
 							<string>didTapFKey</string>
 							<string>didTapGKey</string>
@@ -497,6 +521,7 @@
 							<string>didTapRKey</string>
 							<string>didTapReturnKey</string>
 							<string>didTapSKey</string>
+							<string>didTapSpaceKey</string>
 							<string>didTapTKey</string>
 							<string>didTapUKey</string>
 							<string>didTapVKey</string>
@@ -523,6 +548,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">didTapDKey</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">didTapDropKey</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -590,6 +619,10 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">didTapSpaceKey</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">didTapTKey</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -631,6 +664,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>clearButton</string>
+							<string>repeatButton</string>
 							<string>searchBar</string>
 							<string>searchTextField</string>
 							<string>sequentialKeyboardView</string>
@@ -639,6 +674,8 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIBarButtonItem</string>
+							<string>UIBarButtonItem</string>
 							<string>UISearchBar</string>
 							<string>UITextField</string>
 							<string>UIView</string>
@@ -650,6 +687,8 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>clearButton</string>
+							<string>repeatButton</string>
 							<string>searchBar</string>
 							<string>searchTextField</string>
 							<string>sequentialKeyboardView</string>
@@ -658,6 +697,14 @@
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">clearButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">repeatButton</string>
+								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">searchBar</string>
 								<string key="candidateClassName">UISearchBar</string>

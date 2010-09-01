@@ -56,10 +56,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 	
-	/*[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
-								  owner:self options:nil];
-	self.searchTextField.inputView = self.sequentialKeyboardView;*/
-	
 }
 
 -(void) viewWillAppear:(BOOL)animated {
@@ -132,26 +128,45 @@
 
     
     // Get the origin of the keyboard when it's displayed.
-    NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];	
 	
 
     // Get the top of the keyboard as the y coordinate of its origin in self's view's coordinate system. The bottom of the text view's frame should align with the top of the keyboard's final position.
     CGRect keyboardRect = [aValue CGRectValue];
-    keyboardRect = [self.view convertRect:keyboardRect fromView:nil];
-	
+    
+	keyboardRect = [self.view convertRect:keyboardRect fromView:nil];
+	//if (searchTextField.inputView) {
+	//	keyboardRect = CGRectMake(searchTextField.inputView.frame.origin.x, searchTextField.inputView.frame.origin.y, 
+		//					  searchTextField.inputView.frame.size.width, searchTextField.inputView.frame.size.height);
+	//}
 	
 	
     CGFloat keyboardTop = keyboardRect.origin.y;
 	
+//	if ([key isEqualToString:@"ABCD"]) {
+	//	keyboardTop = 699.0;
+//	}
+	
+	self.toolbar = nil;
+	
 	if (!self.toolbar) {
-		//if landscape
-		self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 768, 40)];
+		//if portrait
+		if ([self interfaceOrientation] == UIInterfaceOrientationPortrait) {
+			self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 768, 40)];
+		}
+		else {
+			self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 1024, 40)];
+		}
+
+		
 	}
+	NSMutableArray *items = [NSMutableArray arrayWithObjects:clearButton, repeatButton, nil];
+	[[self toolbar] setItems:items];
 	[[self toolbar] setHidden:NO];
 	
 	[self.view addSubview:toolbar];
     CGRect newTextViewFrame = tableView.frame;
-    newTextViewFrame.size.height = keyboardTop - tableView.frame.origin.y;
+    //newTextViewFrame.size.height = keyboardTop - tableView.frame.origin.y;
     
     // Get the duration of the animation.
     NSValue *animationDurationValue = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
@@ -230,7 +245,9 @@
 		if (searchTextField.inputView == nil) {
 			[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
 										  owner:self options:nil];
+	//		self.sequentialKeyboardView.autoresizingMask = UIViewAutoresizingFlexibleHeight ;
 			searchTextField.inputView = self.sequentialKeyboardView;
+		//	searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 		}
 	}
 	else {
@@ -604,6 +621,12 @@
 	//self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"a"];
 //	same as other return key;
 	[self textFieldShouldReturn:searchTextField];
+	[searchTextField resignFirstResponder];
+}
+-(IBAction) didTapSpaceKey {
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@" "];
+}
+-(IBAction) didTapDropKey {
 	[searchTextField resignFirstResponder];
 }
 
