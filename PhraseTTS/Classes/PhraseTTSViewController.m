@@ -300,6 +300,8 @@
 		
 		[[Model instance] speakText:searchTextField.text];
 		self.searchTextField.text=@"";
+		self.currentSearchResults = (NSMutableArray*)[[SearchResult getTopUsedPhrases] retain];
+		[tableView reloadData];
 		
 	}
 	
@@ -316,6 +318,8 @@
 
 - (IBAction)didTouchClearButton {
 	[searchTextField setText:@""];
+	self.currentSearchResults = (NSMutableArray*)[[SearchResult getTopUsedPhrases] retain];
+	[tableView reloadData];
 }
 
 - (IBAction)speakPrevious{

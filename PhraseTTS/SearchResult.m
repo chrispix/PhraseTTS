@@ -222,11 +222,15 @@
 	
 	NSString * noPunc = [[query componentsSeparatedByCharactersInSet:[NSCharacterSet punctuationCharacterSet]] componentsJoinedByString:@""];
 	
+	if ( [noPunc characterAtIndex:([noPunc length]-1)] == ' ' ) {
+		noPunc = [noPunc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+	}
 	// add * to specify partial matches on words...b
-	if ( [noPunc characterAtIndex:([noPunc length]-1)] != ' ' ) {
+//	if ( [noPunc characterAtIndex:([noPunc length]-1)] != ' ' ) {
 		NSLog(@"no space");
 		noPunc = [noPunc stringByAppendingString:@"%"];
-	}
+//	}
+
 	
 	// SELECT * FROM phrases LEFT OUTER JOIN used_phrases ON phrases.rowid = used_phrases.rowid;
 	// SELECT phrases.body,used_phrases.uses FROM phrases LEFT OUTER JOIN used_phrases ON phrases.rowid = used_phrases.rowid WHERE phrases.no_punc_body MATCH 'hav*';
