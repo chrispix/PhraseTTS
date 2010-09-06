@@ -85,7 +85,6 @@
 	[searchTextField resignFirstResponder];
 	[self selectKeyboard];
 	[searchTextField becomeFirstResponder];
-//	[UIView commitAnimations];
 }
 
 	
@@ -237,20 +236,16 @@
 	
 	if ([key isEqualToString:@"ABCD"]) {
 		if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait) {
-			//if (searchTextField.inputView == nil) {
-				[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
-											  owner:self options:nil];
-				searchTextField.inputView = self.sequentialKeyboardView;
-				searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-			//}
+			[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
+										  owner:self options:nil];
+			searchTextField.inputView = self.sequentialKeyboardView;
+			searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 		}
 		else {	 
-			//if (searchTextField.inputView == nil) {
-				[[NSBundle mainBundle] loadNibNamed:@"LandscapeSequentialKeyboard"
-											  owner:self options:nil];
-				searchTextField.inputView = self.landscapeKeyboard;
-				searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-			//}
+			[[NSBundle mainBundle] loadNibNamed:@"LandscapeSequentialKeyboard"
+										  owner:self options:nil];
+			searchTextField.inputView = self.landscapeKeyboard;
+			searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 		}
 	}
 	else {
@@ -265,14 +260,9 @@
 		if (searchTextField.inputAccessoryView == nil) {
 			wordSuggestionsView = [[WordSuggestionsView alloc] init];
 			searchTextField.inputAccessoryView = wordSuggestionsView;    
-			
 		}
-	
-	}
-	
-	
-	return YES;
-	
+	}	
+	return YES;	
 }
 
 #pragma mark -
@@ -467,8 +457,7 @@
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	//[self selectKeyboard];
-    return YES;
+	return YES;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -590,26 +579,9 @@
 	[searchTextField resignFirstResponder];
 }
 -(IBAction) didTapDeleteKey {
-//	NSRange *range = self.searchTextField.text;
-//	self.searchTextField.text = [self.searchTextField.text stringByReplacingCharactersInRange:<#(NSRange)range#> withString:@""];
+	NSString *backspace = searchTextField.text;
+	int lengthofstring = backspace.length;
+	backspace = [backspace substringToIndex:lengthofstring - 1];
+	searchTextField.text = backspace;
 }
-/*	NSRange r = self.searchTextField.; 
-	if (r.length > 0) {
-		// the user has highlighted some text, fall through to delete it 
-	} else {
-		// there's just an insertion point 
-		if (r.location == 0) {
-		// cursor is at the beginning, forget about it.
-			return; 
-		} 
-		else {
-			r.location -= 1; 
-			r.length = 1;
-		}
-	}
-	self.searchTextField.text = [self.text stringByReplacingCharactersInRange:r withString:@""]; 
-	r.length = 0; 
-	self.searchTextField.selected = r;
-}*/
-
 @end

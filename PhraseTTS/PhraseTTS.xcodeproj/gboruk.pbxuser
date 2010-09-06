@@ -22,17 +22,17 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* PhraseTTSViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1027, 1092}}";
-			sepNavSelRange = "{2255, 0}";
-			sepNavVisRange = "{998, 1265}";
+			sepNavIntBoundsRect = "{{0, 0}, {1027, 1118}}";
+			sepNavSelRange = "{2281, 0}";
+			sepNavVisRange = "{1128, 1155}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */ = {
 		uiCtxt = {
-			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{12483, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{12534, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{12584, 12}\";\n            s = 1;\n        },\n                {\n            l = \"(NSRange)range\";\n            r = \"{17122, 18}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 17639}\";\n    s = 0;\n}";
-			sepNavIntBoundsRect = "{{0, 0}, {1111, 8203}}";
-			sepNavSelRange = "{2596, 0}";
-			sepNavVisRange = "{1667, 1236}";
+			sepNavFolds = "{\n    c =     (\n                {\n            l = DetailViewController;\n            r = \"{12331, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{12382, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{12432, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 16990}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {891, 7319}}";
+			sepNavSelRange = "{16928, 0}";
+			sepNavVisRange = "{15400, 1533}";
 			sepNavWindowFrame = "{{19, 0}, {1098, 778}}";
 		};
 	};
@@ -47,11 +47,10 @@
 		breakpoints = (
 			C325425112204FF80039E319 /* WordSuggestionsView.m:47 */,
 			C34EEA1312276B6A003BAE96 /* PhraseTTSViewController.m:55 */,
-			C36F45D1122B7B53001B34CB /* PhraseTTSViewController.m:378 */,
+			C36F45D1122B7B53001B34CB /* PhraseTTSViewController.m:368 */,
 			C37D6167122DEFA4003D54EB /* SearchResult.m:263 */,
 			C37D616E122DF047003D54EB /* SearchResult.m:229 */,
-			C37749F012354C37009593EC /* PhraseTTSViewController.m:595 */,
-			C3774BEE12357FCD009593EC /* PhraseTTSViewController.m:88 */,
+			C37749F012354C37009593EC /* PhraseTTSViewController.m:586 */,
 		);
 		codeSenseManager = C34EBD39121F697500B94DEE /* Code sense */;
 		executables = (
@@ -182,6 +181,14 @@
 			C3774BFB12358734009593EC /* PBXTextBookmark */ = C3774BFB12358734009593EC /* PBXTextBookmark */;
 			C3774BFE1235876E009593EC /* PBXTextBookmark */ = C3774BFE1235876E009593EC /* PBXTextBookmark */;
 			C3774C0112358CAF009593EC /* PBXTextBookmark */ = C3774C0112358CAF009593EC /* PBXTextBookmark */;
+			C3774C0712359062009593EC /* PBXTextBookmark */ = C3774C0712359062009593EC /* PBXTextBookmark */;
+			C3774C0812359062009593EC /* PBXTextBookmark */ = C3774C0812359062009593EC /* PBXTextBookmark */;
+			C3774C0912359062009593EC /* PBXTextBookmark */ = C3774C0912359062009593EC /* PBXTextBookmark */;
+			C3774C0B123590F3009593EC /* PBXTextBookmark */ = C3774C0B123590F3009593EC /* PBXTextBookmark */;
+			C3774C0C123590F3009593EC /* PBXTextBookmark */ = C3774C0C123590F3009593EC /* PBXTextBookmark */;
+			C3774C0D123590F3009593EC /* PBXTextBookmark */ = C3774C0D123590F3009593EC /* PBXTextBookmark */;
+			C3774C101235915A009593EC /* PBXTextBookmark */ = C3774C101235915A009593EC /* PBXTextBookmark */;
+			C3774C131235918B009593EC /* PBXTextBookmark */ = C3774C131235918B009593EC /* PBXTextBookmark */;
 		};
 		sourceControlManager = C34EBD38121F697500B94DEE /* Source Control */;
 		userBuildSettings = {
@@ -328,7 +335,7 @@
 		ignoreCount = 0;
 		lineNumber = 47;
 		location = PhraseTTS;
-		modificationTime = 305497909.498455;
+		modificationTime = 305500508.11432;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -462,7 +469,7 @@
 		ignoreCount = 0;
 		lineNumber = 55;
 		location = PhraseTTS;
-		modificationTime = 305497909.503687;
+		modificationTime = 305500508.120639;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -551,7 +558,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 255";
 		rLen = 0;
-		rLoc = 8018;
+		rLoc = 7876;
 		rType = 0;
 		vrLen = 1250;
 		vrLoc = 7007;
@@ -561,7 +568,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 249";
 		rLen = 0;
-		rLoc = 8018;
+		rLoc = 7876;
 		rType = 0;
 		vrLen = 1275;
 		vrLoc = 6943;
@@ -616,7 +623,7 @@
 		vrLen = 2069;
 		vrLoc = 5270;
 	};
-	C36F45D1122B7B53001B34CB /* PhraseTTSViewController.m:378 */ = {
+	C36F45D1122B7B53001B34CB /* PhraseTTSViewController.m:368 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -628,9 +635,9 @@
 		functionName = "-searchBar:textDidChange:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 378;
+		lineNumber = 368;
 		location = PhraseTTS;
-		modificationTime = 305497909.506703;
+		modificationTime = 305500508.1235;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -649,7 +656,7 @@
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		rLen = 1;
-		rLoc = 145;
+		rLoc = 144;
 		rType = 1;
 	};
 	C377497412353C1B009593EC /* PBXTextBookmark */ = {
@@ -657,7 +664,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 249";
 		rLen = 0;
-		rLoc = 8018;
+		rLoc = 7876;
 		rType = 0;
 		vrLen = 1356;
 		vrLoc = 6864;
@@ -667,7 +674,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 265";
 		rLen = 0;
-		rLoc = 8042;
+		rLoc = 7900;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 6864;
@@ -677,7 +684,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 265";
 		rLen = 0;
-		rLoc = 8042;
+		rLoc = 7900;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 6864;
@@ -687,7 +694,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 520";
 		rLen = 0;
-		rLoc = 13008;
+		rLoc = 12832;
 		rType = 0;
 		vrLen = 1147;
 		vrLoc = 13476;
@@ -697,7 +704,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 256";
 		rLen = 0;
-		rLoc = 7896;
+		rLoc = 7755;
 		rType = 0;
 		vrLen = 1189;
 		vrLoc = 7050;
@@ -707,7 +714,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 520";
 		rLen = 0;
-		rLoc = 12986;
+		rLoc = 12832;
 		rType = 0;
 		vrLen = 1217;
 		vrLoc = 13542;
@@ -717,7 +724,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 155";
 		rLen = 0;
-		rLoc = 4338;
+		rLoc = 4308;
 		rType = 0;
 		vrLen = 1310;
 		vrLoc = 3939;
@@ -727,7 +734,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 143";
 		rLen = 0;
-		rLoc = 4119;
+		rLoc = 4089;
 		rType = 0;
 		vrLen = 1665;
 		vrLoc = 3278;
@@ -737,7 +744,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 143";
 		rLen = 0;
-		rLoc = 4119;
+		rLoc = 4089;
 		rType = 0;
 		vrLen = 1650;
 		vrLoc = 3358;
@@ -747,7 +754,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 145";
 		rLen = 0;
-		rLoc = 4119;
+		rLoc = 4089;
 		rType = 0;
 		vrLen = 1615;
 		vrLoc = 2986;
@@ -757,7 +764,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 145";
 		rLen = 0;
-		rLoc = 4119;
+		rLoc = 4089;
 		rType = 0;
 		vrLen = 1619;
 		vrLoc = 2986;
@@ -767,7 +774,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 250";
 		rLen = 0;
-		rLoc = 7388;
+		rLoc = 7256;
 		rType = 0;
 		vrLen = 1368;
 		vrLoc = 6796;
@@ -777,7 +784,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 250";
 		rLen = 0;
-		rLoc = 7388;
+		rLoc = 7256;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 7157;
@@ -787,7 +794,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 250";
 		rLen = 0;
-		rLoc = 7388;
+		rLoc = 7256;
 		rType = 0;
 		vrLen = 1495;
 		vrLoc = 6904;
@@ -797,7 +804,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 250";
 		rLen = 0;
-		rLoc = 7388;
+		rLoc = 7256;
 		rType = 0;
 		vrLen = 1522;
 		vrLoc = 3278;
@@ -807,7 +814,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 651";
 		rLen = 0;
-		rLoc = 17247;
+		rLoc = 16985;
 		rType = 0;
 		vrLen = 1360;
 		vrLoc = 17505;
@@ -817,7 +824,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 649";
 		rLen = 0;
-		rLoc = 17196;
+		rLoc = 16985;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 17505;
@@ -827,7 +834,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 666";
 		rLen = 0;
-		rLoc = 17632;
+		rLoc = 16985;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 17507;
@@ -837,7 +844,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 247";
 		rLen = 0;
-		rLoc = 7953;
+		rLoc = 7811;
 		rType = 0;
 		vrLen = 1000;
 		vrLoc = 7641;
@@ -847,7 +854,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 579";
 		rLen = 27;
-		rLoc = 16952;
+		rLoc = 16771;
 		rType = 0;
 		vrLen = 1456;
 		vrLoc = 15692;
@@ -867,7 +874,7 @@
 		fRef = 28D7ACF60DDB3853001CB0EB /* PhraseTTSViewController.h */;
 		name = "PhraseTTSViewController.h: 80";
 		rLen = 0;
-		rLoc = 2255;
+		rLoc = 2281;
 		rType = 0;
 		vrLen = 1264;
 		vrLoc = 998;
@@ -877,7 +884,7 @@
 		fRef = 28D7ACF60DDB3853001CB0EB /* PhraseTTSViewController.h */;
 		name = "PhraseTTSViewController.h: 80";
 		rLen = 0;
-		rLoc = 2255;
+		rLoc = 2281;
 		rType = 0;
 		vrLen = 1265;
 		vrLoc = 998;
@@ -887,7 +894,7 @@
 		fRef = 28D7ACF60DDB3853001CB0EB /* PhraseTTSViewController.h */;
 		name = "PhraseTTSViewController.h: 80";
 		rLen = 0;
-		rLoc = 2255;
+		rLoc = 2281;
 		rType = 0;
 		vrLen = 1265;
 		vrLoc = 998;
@@ -897,7 +904,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 579";
 		rLen = 27;
-		rLoc = 16952;
+		rLoc = 16771;
 		rType = 0;
 		vrLen = 1481;
 		vrLoc = 15667;
@@ -907,12 +914,12 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 343";
 		rLen = 0;
-		rLoc = 9975;
+		rLoc = 9823;
 		rType = 0;
 		vrLen = 825;
 		vrLoc = 9110;
 	};
-	C37749F012354C37009593EC /* PhraseTTSViewController.m:595 */ = {
+	C37749F012354C37009593EC /* PhraseTTSViewController.m:586 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -924,9 +931,9 @@
 		functionName = "-didTapDeleteKey";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 595;
+		lineNumber = 586;
 		location = PhraseTTS;
-		modificationTime = 305497909.521224;
+		modificationTime = 305500508.130325;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -935,7 +942,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 343";
 		rLen = 0;
-		rLoc = 9975;
+		rLoc = 9823;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 15836;
@@ -945,7 +952,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 343";
 		rLen = 0;
-		rLoc = 9975;
+		rLoc = 9823;
 		rType = 0;
 		vrLen = 1347;
 		vrLoc = 15806;
@@ -955,7 +962,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 580";
 		rLen = 0;
-		rLoc = 17032;
+		rLoc = 16983;
 		rType = 0;
 		vrLen = 1268;
 		vrLoc = 15895;
@@ -975,7 +982,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 581";
 		rLen = 0;
-		rLoc = 17032;
+		rLoc = 16983;
 		rType = 0;
 		vrLen = 1260;
 		vrLoc = 15908;
@@ -985,7 +992,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 581";
 		rLen = 0;
-		rLoc = 17087;
+		rLoc = 16983;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 15908;
@@ -995,7 +1002,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 581";
 		rLen = 0;
-		rLoc = 17087;
+		rLoc = 16983;
 		rType = 0;
 		vrLen = 1256;
 		vrLoc = 15908;
@@ -1005,7 +1012,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 581";
 		rLen = 0;
-		rLoc = 17028;
+		rLoc = 16983;
 		rType = 0;
 		vrLen = 1560;
 		vrLoc = 15682;
@@ -1015,7 +1022,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 582";
 		rLen = 0;
-		rLoc = 17031;
+		rLoc = 16983;
 		rType = 0;
 		vrLen = 1448;
 		vrLoc = 15794;
@@ -1025,7 +1032,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 582";
 		rLen = 0;
-		rLoc = 16974;
+		rLoc = 16793;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 2864;
@@ -1035,7 +1042,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 580";
 		rLen = 0;
-		rLoc = 16974;
+		rLoc = 16793;
 		rType = 0;
 		vrLen = 1410;
 		vrLoc = 2864;
@@ -1045,7 +1052,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 139";
 		rLen = 0;
-		rLoc = 4170;
+		rLoc = 4140;
 		rType = 0;
 		vrLen = 1739;
 		vrLoc = 2931;
@@ -1055,7 +1062,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 251";
 		rLen = 22;
-		rLoc = 8020;
+		rLoc = 7878;
 		rType = 0;
 		vrLen = 1189;
 		vrLoc = 7007;
@@ -1065,7 +1072,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 141";
 		rLen = 0;
-		rLoc = 4171;
+		rLoc = 4141;
 		rType = 0;
 		vrLen = 1595;
 		vrLoc = 2868;
@@ -1075,7 +1082,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 140";
 		rLen = 0;
-		rLoc = 4171;
+		rLoc = 4141;
 		rType = 0;
 		vrLen = 1703;
 		vrLoc = 2868;
@@ -1085,7 +1092,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 226";
 		rLen = 0;
-		rLoc = 7160;
+		rLoc = 7130;
 		rType = 0;
 		vrLen = 1559;
 		vrLoc = 6060;
@@ -1095,7 +1102,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 140";
 		rLen = 0;
-		rLoc = 4171;
+		rLoc = 4141;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 2718;
@@ -1105,35 +1112,17 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 88";
 		rLen = 0;
-		rLoc = 2626;
+		rLoc = 2596;
 		rType = 0;
 		vrLen = 1193;
 		vrLoc = 1924;
-	};
-	C3774BEE12357FCD009593EC /* PhraseTTSViewController.m:88 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
-		functionName = "-receivedRotate:";
-		hitCount = 3;
-		ignoreCount = 0;
-		lineNumber = 88;
-		location = PhraseTTS;
-		modificationTime = 305498194.574355;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
 	};
 	C3774BF012357FCF009593EC /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 88";
 		rLen = 0;
-		rLoc = 2626;
+		rLoc = 2596;
 		rType = 0;
 		vrLen = 1193;
 		vrLoc = 1924;
@@ -1143,7 +1132,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 88";
 		rLen = 0;
-		rLoc = 2626;
+		rLoc = 2596;
 		rType = 0;
 		vrLen = 1193;
 		vrLoc = 1924;
@@ -1153,7 +1142,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 86";
 		rLen = 0;
-		rLoc = 2597;
+		rLoc = 2594;
 		rType = 0;
 		vrLen = 1193;
 		vrLoc = 1924;
@@ -1163,7 +1152,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 91";
 		rLen = 0;
-		rLoc = 2597;
+		rLoc = 2594;
 		rType = 0;
 		vrLen = 1117;
 		vrLoc = 2194;
@@ -1173,7 +1162,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 259";
 		rLen = 27;
-		rLoc = 7962;
+		rLoc = 7820;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 7777;
@@ -1183,10 +1172,90 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
 		name = "PhraseTTSViewController.m: 88";
 		rLen = 0;
-		rLoc = 2596;
+		rLoc = 2594;
 		rType = 0;
 		vrLen = 1236;
 		vrLoc = 1667;
+	};
+	C3774C0712359062009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* PhraseTTSViewController.h */;
+		name = "PhraseTTSViewController.h: 82";
+		rLen = 0;
+		rLoc = 2281;
+		rType = 0;
+		vrLen = 1160;
+		vrLoc = 1128;
+	};
+	C3774C0812359062009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
+		name = "PhraseTTSViewController.m: 232";
+		rLen = 23;
+		rLoc = 6950;
+		rType = 0;
+		vrLen = 1518;
+		vrLoc = 6387;
+	};
+	C3774C0912359062009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
+		name = "PhraseTTSViewController.m: 234";
+		rLen = 0;
+		rLoc = 7041;
+		rType = 0;
+		vrLen = 1516;
+		vrLoc = 6389;
+	};
+	C3774C0B123590F3009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* PhraseTTSViewController.h */;
+		name = "PhraseTTSViewController.h: 82";
+		rLen = 0;
+		rLoc = 2281;
+		rType = 0;
+		vrLen = 1155;
+		vrLoc = 1128;
+	};
+	C3774C0C123590F3009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
+		name = "PhraseTTSViewController.m: 470";
+		rLen = 0;
+		rLoc = 12832;
+		rType = 0;
+		vrLen = 1188;
+		vrLoc = 12305;
+	};
+	C3774C0D123590F3009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
+		name = "PhraseTTSViewController.m: 265";
+		rLen = 0;
+		rLoc = 8122;
+		rType = 0;
+		vrLen = 1428;
+		vrLoc = 13231;
+	};
+	C3774C101235915A009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
+		name = "PhraseTTSViewController.m: 585";
+		rLen = 0;
+		rLoc = 16964;
+		rType = 0;
+		vrLen = 1407;
+		vrLoc = 16228;
+	};
+	C3774C131235918B009593EC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* PhraseTTSViewController.m */;
+		name = "PhraseTTSViewController.m: 587";
+		rLen = 0;
+		rLoc = 16985;
+		rType = 0;
+		vrLen = 1533;
+		vrLoc = 15457;
 	};
 	C37D6167122DEFA4003D54EB /* SearchResult.m:263 */ = {
 		isa = PBXFileBreakpoint;
@@ -1202,7 +1271,7 @@
 		ignoreCount = 0;
 		lineNumber = 263;
 		location = PhraseTTS;
-		modificationTime = 305497909.509754;
+		modificationTime = 305500508.126288;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1220,7 +1289,7 @@
 		ignoreCount = 0;
 		lineNumber = 229;
 		location = PhraseTTS;
-		modificationTime = 305497909.512295;
+		modificationTime = 305500508.128321;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};

@@ -79,5 +79,7 @@
 -(IBAction) didTapDropKey;
 -(IBAction) didTapDeleteKey;
 
+- (void) selectKeyboard;
+
 @end
 
