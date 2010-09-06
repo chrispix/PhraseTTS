@@ -222,9 +222,9 @@
 	
 	NSString * noPunc = [[query componentsSeparatedByCharactersInSet:[NSCharacterSet punctuationCharacterSet]] componentsJoinedByString:@""];
 	
-	if ( [noPunc characterAtIndex:([noPunc length]-1)] == ' ' ) {
-		noPunc = [noPunc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-	}
+//	if ( [noPunc characterAtIndex:([noPunc length]-1)] == ' ' ) {
+//		noPunc = [noPunc stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+//	}
 	// add * to specify partial matches on words...b
 //	if ( [noPunc characterAtIndex:([noPunc length]-1)] != ' ' ) {
 		NSLog(@"no space");

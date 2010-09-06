@@ -3,16 +3,16 @@
 	<data>
 		<int key="IBDocument.SystemTarget">800</int>
 		<string key="IBDocument.SystemVersion">10F569</string>
-		<string key="IBDocument.InterfaceBuilderVersion">788</string>
+		<string key="IBDocument.InterfaceBuilderVersion">804</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">117</string>
+			<string key="NS.object.0">123</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
+			<integer value="88"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -994,15 +994,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">didTapYKey</string>
-						<reference key="source" ref="496120416"/>
-						<reference key="destination" ref="372490531"/>
-						<int key="IBEventType">7</int>
-					</object>
-					<int key="connectionID">123</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">didTapSpaceKey</string>
 						<reference key="source" ref="98681683"/>
 						<reference key="destination" ref="372490531"/>
@@ -1018,6 +1009,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">128</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">didTapDeleteKey</string>
+						<reference key="source" ref="35724031"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">130</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1063,9 +1063,9 @@
 							<reference ref="283033653"/>
 							<reference ref="98681683"/>
 							<reference ref="496120416"/>
-							<reference ref="35724031"/>
 							<reference ref="936484883"/>
 							<reference ref="858485441"/>
+							<reference ref="35724031"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -1280,6 +1280,7 @@
 					<string>73.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>88.IBPluginDependency</string>
+					<string>88.IBViewBoundsToFrameTransform</string>
 					<string>89.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
 				</object>
@@ -1287,7 +1288,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>PhraseTTSViewController</string>
 					<string>UIResponder</string>
-					<string>{{174, 371}, {768, 325}}</string>
+					<string>{{127, 226}, {768, 325}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1319,6 +1320,9 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABELQAAwqoAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
@@ -1339,7 +1343,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">128</int>
+			<int key="maxID">130</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1355,6 +1359,7 @@
 							<string>didTapBKey</string>
 							<string>didTapCKey</string>
 							<string>didTapDKey</string>
+							<string>didTapDeleteKey</string>
 							<string>didTapDropKey</string>
 							<string>didTapEKey</string>
 							<string>didTapFKey</string>
@@ -1416,6 +1421,7 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="actionInfosByName">
@@ -1426,6 +1432,7 @@
 							<string>didTapBKey</string>
 							<string>didTapCKey</string>
 							<string>didTapDKey</string>
+							<string>didTapDeleteKey</string>
 							<string>didTapDropKey</string>
 							<string>didTapEKey</string>
 							<string>didTapFKey</string>
@@ -1470,6 +1477,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">didTapDKey</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">didTapDeleteKey</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -1587,6 +1598,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>clearButton</string>
+							<string>landscapeKeyboard</string>
 							<string>repeatButton</string>
 							<string>searchBar</string>
 							<string>searchTextField</string>
@@ -1597,6 +1609,7 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIBarButtonItem</string>
+							<string>UIView</string>
 							<string>UIBarButtonItem</string>
 							<string>UISearchBar</string>
 							<string>UITextField</string>
@@ -1610,6 +1623,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>clearButton</string>
+							<string>landscapeKeyboard</string>
 							<string>repeatButton</string>
 							<string>searchBar</string>
 							<string>searchTextField</string>
@@ -1622,6 +1636,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">clearButton</string>
 								<string key="candidateClassName">UIBarButtonItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">landscapeKeyboard</string>
+								<string key="candidateClassName">UIView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">repeatButton</string>
@@ -1997,6 +2015,6 @@
 				<string>{350, 61}</string>
 			</object>
 		</object>
-		<string key="IBCocoaTouchPluginVersion">117</string>
+		<string key="IBCocoaTouchPluginVersion">123</string>
 	</data>
 </archive>

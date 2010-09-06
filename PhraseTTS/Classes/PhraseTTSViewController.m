@@ -22,7 +22,8 @@
 
 @implementation PhraseTTSViewController
 
-@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar, previous, sequentialKeyboardView;
+@synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar, previous, 
+ clearButton, sequentialKeyboardView, landscapeKeyboard;
 
 
 /*
@@ -75,7 +76,19 @@
 	} else {
 		searchTextField.autocorrectionType = UITextAutocorrectionTypeNo;
 	}
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+	[[NSNotificationCenter defaultCenter] addObserver: self selector: @selector(receivedRotate:) name: UIDeviceOrientationDidChangeNotification object: nil];
+	
 }
+-(void) receivedRotate: (NSNotification*) notification
+{
+	[searchTextField resignFirstResponder];
+	[self selectKeyboard];
+	[searchTextField becomeFirstResponder];
+//	[UIView commitAnimations];
+}
+
+	
 
 -(void) phraseDbReady {
 	
@@ -126,26 +139,15 @@
 	
     NSDictionary *userInfo = [notification userInfo];
 
-    
     // Get the origin of the keyboard when it's displayed.
     NSValue* aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];	
 	
-
     // Get the top of the keyboard as the y coordinate of its origin in self's view's coordinate system. The bottom of the text view's frame should align with the top of the keyboard's final position.
     CGRect keyboardRect = [aValue CGRectValue];
     
 	keyboardRect = [self.view convertRect:keyboardRect fromView:nil];
-	//if (searchTextField.inputView) {
-	//	keyboardRect = CGRectMake(searchTextField.inputView.frame.origin.x, searchTextField.inputView.frame.origin.y, 
-		//					  searchTextField.inputView.frame.size.width, searchTextField.inputView.frame.size.height);
-	//}
-	
-	
+
     CGFloat keyboardTop = keyboardRect.origin.y;
-	
-//	if ([key isEqualToString:@"ABCD"]) {
-	//	keyboardTop = 699.0;
-//	}
 	
 	self.toolbar = nil;
 	
@@ -157,8 +159,6 @@
 		else {
 			self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 1024, 40)];
 		}
-
-		
 	}
 	NSMutableArray *items = [NSMutableArray arrayWithObjects:clearButton, repeatButton, nil];
 	[[self toolbar] setItems:items];
@@ -166,7 +166,6 @@
 	
 	[self.view addSubview:toolbar];
     CGRect newTextViewFrame = tableView.frame;
-    //newTextViewFrame.size.height = keyboardTop - tableView.frame.origin.y;
     
     // Get the duration of the animation.
     NSValue *animationDurationValue = [userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey];
@@ -178,8 +177,7 @@
     [UIView setAnimationDuration:animationDuration];
     
     tableView.frame = newTextViewFrame;
-	
-	
+		
     [UIView commitAnimations];
 }
 
@@ -216,14 +214,11 @@
 		[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(delayedWordCheck) object:nil];
 		[self performSelector:@selector(delayedWordCheck) withObject:nil afterDelay:0.5];
 	}
-	
 	return YES;
 }
 
 -(void) delayedWordCheck {
-	
 	[wordSuggestionsView displaySuggestionsForWord:searchTextField.text];
-	
 }
 
 - (BOOL)textFieldShouldClear:(UITextField *)textField {
@@ -234,26 +229,38 @@
 	return YES;
 }
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-	
-	[[NSUserDefaults standardUserDefaults] synchronize];
+- (void) selectKeyboard {
 	NSUserDefaults * defs = [NSUserDefaults standardUserDefaults];
 	
 	NSString *key = [defs objectForKey:kKeyboardTypeKey];
+	searchTextField.inputView = nil;
 	
 	if ([key isEqualToString:@"ABCD"]) {
-		if (searchTextField.inputView == nil) {
-			[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
-										  owner:self options:nil];
-	//		self.sequentialKeyboardView.autoresizingMask = UIViewAutoresizingFlexibleHeight ;
-			searchTextField.inputView = self.sequentialKeyboardView;
-		//	searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+		if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait) {
+			//if (searchTextField.inputView == nil) {
+				[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
+											  owner:self options:nil];
+				searchTextField.inputView = self.sequentialKeyboardView;
+				searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+			//}
+		}
+		else {	 
+			//if (searchTextField.inputView == nil) {
+				[[NSBundle mainBundle] loadNibNamed:@"LandscapeSequentialKeyboard"
+											  owner:self options:nil];
+				searchTextField.inputView = self.landscapeKeyboard;
+				searchTextField.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+			//}
 		}
 	}
 	else {
 		searchTextField.inputView = nil;
 	}
+}
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
 	
+	[self selectKeyboard];
 	if ( USE_WORD_LIST ) {
 		if (searchTextField.inputAccessoryView == nil) {
 			wordSuggestionsView = [[WordSuggestionsView alloc] init];
@@ -338,6 +345,15 @@
 	self.currentSearchResults = (NSMutableArray*)[[SearchResult getTopUsedPhrases] retain];
 	[tableView reloadData];
 }
+-(void) resultClicked:(SearchResult*) result {
+	
+	
+	[[Model instance] speakText: result.body ];
+	
+	[result incrementUsesAndSave];
+	previous = result;
+	
+}
 
 - (IBAction)speakPrevious{
 	if (self.previous) {
@@ -346,6 +362,7 @@
 		
 }
 	
+
 
 
 #pragma mark -
@@ -384,8 +401,6 @@
 	
 }
 
-
-
 #pragma mark -
 #pragma mark Table view data source
 
@@ -397,7 +412,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	return CELL_HEIGHT;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
  
@@ -412,7 +426,6 @@
 	}
 	
 }
-
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -438,60 +451,8 @@
     return cell;
 }
 
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- 
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:YES];
- }   
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }   
- }
- */
-
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-
 #pragma mark -
 #pragma mark Table view delegate
-
--(void) resultClicked:(SearchResult*) result {
-	
-	
-	[[Model instance] speakText: result.body ];
-	
-	[result incrementUsesAndSave];
-	previous = result;
-	
-}
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
@@ -504,10 +465,9 @@
 	 */
 }
 
-
-
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	//[self selectKeyboard];
     return YES;
 }
 
@@ -629,5 +589,27 @@
 -(IBAction) didTapDropKey {
 	[searchTextField resignFirstResponder];
 }
+-(IBAction) didTapDeleteKey {
+//	NSRange *range = self.searchTextField.text;
+//	self.searchTextField.text = [self.searchTextField.text stringByReplacingCharactersInRange:<#(NSRange)range#> withString:@""];
+}
+/*	NSRange r = self.searchTextField.; 
+	if (r.length > 0) {
+		// the user has highlighted some text, fall through to delete it 
+	} else {
+		// there's just an insertion point 
+		if (r.location == 0) {
+		// cursor is at the beginning, forget about it.
+			return; 
+		} 
+		else {
+			r.location -= 1; 
+			r.length = 1;
+		}
+	}
+	self.searchTextField.text = [self.text stringByReplacingCharactersInRange:r withString:@""]; 
+	r.length = 0; 
+	self.searchTextField.selected = r;
+}*/
 
 @end

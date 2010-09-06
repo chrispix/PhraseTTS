@@ -19,6 +19,7 @@
 	IBOutlet UITextField * searchTextField;
 	IBOutlet UITableView * tableView;
 	UIView *sequentialKeyboardVIew;
+	UIView *landscapeKeyboard;
 	SearchResult *previous;
 	
 	NSMutableArray * currentSearchResults;
@@ -37,6 +38,7 @@
 @property (nonatomic, retain) IBOutlet UITableView * tableView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) IBOutlet UIView *sequentialKeyboardView;
+@property (nonatomic, retain) IBOutlet UIView *landscapeKeyboard;
 @property (nonatomic, retain) NSMutableArray * currentSearchResults;
 @property (nonatomic, retain) SearchResult *previous;
 
@@ -75,6 +77,7 @@
 -(IBAction) didTapReturnKey;
 -(IBAction) didTapSpaceKey;
 -(IBAction) didTapDropKey;
+-(IBAction) didTapDeleteKey;
 
 @end
 
