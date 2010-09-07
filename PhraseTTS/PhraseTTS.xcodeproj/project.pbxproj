@@ -1246,6 +1246,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = "~/Documents/Development/PhraseTTS/PhraseTTS/Entitlements.plist";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Gennady  Borukhovich (T9MK7W295Y)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1257,6 +1258,7 @@
 					"-DSQLITE_ENABLE_FTS3_PARENTHESIS",
 				);
 				PRODUCT_NAME = PhraseTTS;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0129A80F-9DED-4BFC-8694-8565748AD9DF";
 			};
 			name = Debug;
 		};
