@@ -23,7 +23,7 @@
 @implementation PhraseTTSViewController
 
 @synthesize searchBar , tableView, currentSearchResults , searchTextField, toolbar, previous, 
- clearButton, sequentialKeyboardView, landscapeKeyboard;
+ clearButton, repeatButton, sequentialKeyboardView, landscapeKeyboard;
 
 
 /*
@@ -82,9 +82,10 @@
 }
 -(void) receivedRotate: (NSNotification*) notification
 {
-	[searchTextField resignFirstResponder];
-	[self selectKeyboard];
-	[searchTextField becomeFirstResponder];
+	if ([searchTextField isEditing]) {
+		[searchTextField resignFirstResponder];
+		[searchTextField becomeFirstResponder];
+	}
 }
 
 	
@@ -104,7 +105,6 @@
 		return;
 	}
 	
-	//NSString * query = searchBar.text;
 	NSString * query = searchTextField.text;
 	
 	NSMutableArray * arr = nil;
@@ -159,7 +159,10 @@
 			self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, keyboardTop - 40, 1024, 40)];
 		}
 	}
-	NSMutableArray *items = [NSMutableArray arrayWithObjects:clearButton, repeatButton, nil];
+	UIBarButtonItem *space = [[UIBarButtonItem alloc] init];
+	
+	space.width = 100;
+	NSMutableArray *items = [NSMutableArray arrayWithObjects:space, clearButton, repeatButton, nil];
 	[[self toolbar] setItems:items];
 	[[self toolbar] setHidden:NO];
 	
@@ -235,7 +238,8 @@
 	searchTextField.inputView = nil;
 	
 	if ([key isEqualToString:@"ABCD"]) {
-		if ([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait) {
+		if (([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortrait) || 
+			([[UIDevice currentDevice] orientation] == UIInterfaceOrientationPortraitUpsideDown)) {
 			[[NSBundle mainBundle] loadNibNamed:@"SequentialKeyboardView"
 										  owner:self options:nil];
 			searchTextField.inputView = self.sequentialKeyboardView;
@@ -489,91 +493,116 @@
 }
 #pragma mark sequentialKeyboardStrokes
 -(IBAction) didTapAKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"a"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"A"];
+	[self searchTable];
 }
 -(IBAction) didTapBKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"b"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"B"];
+	[self searchTable];
 }
 -(IBAction) didTapCKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"c"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"C"];
+	[self searchTable];
 }
 -(IBAction) didTapDKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"d"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"D"];
+	[self searchTable];
 }
 -(IBAction) didTapEKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"e"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"E"];
+	[self searchTable];
 }
 -(IBAction) didTapFKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"f"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"F"];
+	[self searchTable];
 }
 -(IBAction) didTapGKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"g"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"G"];
+	[self searchTable];
 }
 -(IBAction) didTapHKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"h"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"H"];
+	[self searchTable];
 }
 -(IBAction) didTapIKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"i"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"I"];
+	[self searchTable];
 }
 -(IBAction) didTapJKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"j"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"J"];
+	[self searchTable];
 }
 -(IBAction) didTapKKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"k"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"K"];
+	[self searchTable];
 }
 -(IBAction) didTapLKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"l"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"L"];
+	[self searchTable];
 }
 -(IBAction) didTapMKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"m"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"M"];
+	[self searchTable];
 }
 -(IBAction) didTapNKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"n"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"N"];
+	[self searchTable];
 }
 -(IBAction) didTapOKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"o"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"O"];
+	[self searchTable];
 }
 -(IBAction) didTapPKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"p"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"P"];
+	[self searchTable];
 }
 -(IBAction) didTapQKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"q"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"Q"];
+	[self searchTable];
 }
 -(IBAction) didTapRKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"r"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"R"];
+	[self searchTable];
 }
 -(IBAction) didTapSKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"s"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"S"];
+	[self searchTable];
 }
 -(IBAction) didTapTKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"t"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"T"];
+	[self searchTable];
 }
 -(IBAction) didTapUKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"u"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"U"];
+	[self searchTable];
 }
 -(IBAction) didTapVKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"v"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"V"];
+	[self searchTable];
 }
 -(IBAction) didTapWKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"w"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"W"];
+	[self searchTable];
 }
 -(IBAction) didTapXKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"x"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"X"];
+	[self searchTable];
 }
 -(IBAction) didTapYKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"y"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"Y"];
+	[self searchTable];
 }
 -(IBAction) didTapZKey {
-	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"z"];
+	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"Z"];
+	[self searchTable];
 }
 -(IBAction) didTapReturnKey {
-	//self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@"a"];
-//	same as other return key;
 	[self textFieldShouldReturn:searchTextField];
 	[searchTextField resignFirstResponder];
 }
 -(IBAction) didTapSpaceKey {
 	self.searchTextField.text = [self.searchTextField.text stringByAppendingString:@" "];
+	[self searchTable];
 }
 -(IBAction) didTapDropKey {
 	[searchTextField resignFirstResponder];
@@ -581,7 +610,10 @@
 -(IBAction) didTapDeleteKey {
 	NSString *backspace = searchTextField.text;
 	int lengthofstring = backspace.length;
-	backspace = [backspace substringToIndex:lengthofstring - 1];
+	if (lengthofstring >0) {
+		backspace = [backspace substringToIndex:lengthofstring - 1];
+	}
 	searchTextField.text = backspace;
+	[self searchTable];
 }
 @end
